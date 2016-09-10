@@ -1,0 +1,368 @@
+#+title: Aaron Hall, MBA
+#+author: Aaron Hall
+#+options: toc:t html5-fancy:t
+#+html_doctype: html5
+#+html_container: article
+
+* COMMENT TODO Write up [0/14] [0%]
+  - [ ] About Me
+  - [ ] Talks
+  - [ ] Stack Overflow Answers
+  - [ ] Contributing on Stack Overflow
+  - [ ] Linux
+  - [ ] Python
+  - [ ] Emacs
+  - [ ] HTML
+  - [ ] Statistics
+  - [ ] Economics
+  - [ ] Business
+  - [ ] Finance
+  - [ ] Management
+  - [ ] Strategy (Marketing)
+
+* About Me
+This page is about stuff I'm interested in and that I think you might be
+interested in if you know me, want to learn more about me, or are interested
+in the same types of things that I'm interested in. 
+
+I'm interested in:
+- Programming with Python and Linux
+- Emacs, Spacemacs, Orgmode
+- Computer Science & Economics
+
+It's intended to be a high-level overview. Please search Google or
+follow the links I give if you want to learn more.
+
+* COMMENT My story:
+- National Merit Scholar
+- Graduated with 169 credit hours, BS Political Science & Real Estate
+- Financial Advisor with Ameriprise and Merrill Lynch
+- Spent a year in a Finance PhD program, but did an MBA instead
+- Moved to NYC, got involved in the local tech meetup scene
+- Assistant Director of a non-profit, Business Professor, IT guy 
+- Got hired to write Python at a bank
+- Started answering Python questions on Stack Overflow - now in top 1% of users.
+- Teaching Python at a few Universities now.
+
+* Talks
+I've given a number of talks on Python at Meetups and Conventions - I'll try to link to 
+their material here as much as I can.
+
+- Learning Python with Best Practices (given at NYC Python)
+- Python Best Practices (NYC Python)
+- Linear Models with Python (PyGotham 2014)
+- The Python Data Model, when and how to write Objects (PyGotham 2015 - available on [[https://www.youtube.com/watch?v=iGfggZqXmB0][Youtube]])
+- Functional Programming with Python (NYC Python)
+- Python by Aaron Hall (N Languages Meetup (video coming soon))
+- Best Practices for Reusable Python (PyGotham 2016 (video coming soon))
+
+* Stack Overflow
+Don't learn Python by reading Answers on Stack Overflow. 
+
+Ok, you can learn some things, but you may find you need to later unlearn things. 
+
+However, it is probably safe to read answers written by yours truly.
+
+I have written a lot of answers to questions on StackOverflow. My
+motivation is usually my dissatisfaction with the accepted answer
+and other top answers on the question. I try to write what I 
+consider to be outstanding answers to the questions.
+
+What makes an outstanding answer? To me, answers that are both technically precise 
+and directly communicate the important points are great answers.
+
+On Stack Overflow, they advertise that the best answers rise to the top.
+This condition does not always hold. New great answers are still 
+ranked (by default) way below answers that have been there for years,
+and yet have only gathered a few votes. This issue could be 
+addressed by allowing users to sort by recent votes, but this feature
+may never appear.
+
+#+BEGIN_aside
+I'm in the top .5% of all time (actually top .36% as of this writing,
+but who's keeping score?) on Stack Overflow.
+
+#+BEGIN_HTML
+<a href="http://stackoverflow.com/users/541136/aaron-hall?tab=profile">
+  <img src="http://stackoverflow.com/users/flair/541136.png?theme=clean"
+  width=208 height=58 alt="profile for Aaron Hall at Stack Overflow, for professional and enthusiast programmers"
+  >
+  </img>
+</a>
+#+END_HTML
+#+END_aside
+
+My top [[http://stackoverflow.com/users/541136/aaron-hall?tab=answers&sort=votes][100 or so answers]] are probably worth reading.
+
+I'll list ones I specifically want to call out here. 
+
+Note that I'm linking to the questions,
+not the answers, so Ctrl-F and search for my name 
+if you want to see my answers.
+
+** Procedural Programming
+
+The answers I have on these questions cover important
+idiomatic statements and control flow in Python.
+
+- What does ~if __name__ == “__main__”:~ do? - http://stackoverflow.com/q/419163/541136
+- for loops, else
+- Accessing the index in Python for loops - http://stackoverflow.com/q/522563/541136
+- limit an iterable
+- try except else finally
+
+** Functional Programming 
+
+These answers will cover creation and usage of functions.
+
+In Python, everything is an object. Functions are also objects.
+That makes it easy to make functions first class citizens.
+
+Functions are instantiated by function definitions and lambda statements.
+I recommend function definitions over lambdas in Python. Lambdas 
+are basically severely limited functions - they don't know their 
+name or have a docstring, and you can only give them a simple statement
+to return.
+
+- list comps and generator expressions
+- arguments, *args, **kwargs
+- decorators
+- timing out a function
+- What does the ~yield~ keyword do? - http://stackoverflow.com/q/231767/541136
+
+** Object Oriented Programming (OOP)
+
+
+- ~super~ - http://stackoverflow.com/q/222877/541136
+- Understanding Python ~super()~ with ~__init__()~ methods http://stackoverflow.com/q/576169/541136
+
+- When and how to use ~__slots__~ - http://stackoverflow.com/q/472000/541136
+  Note that this is a huge example, in my mind, of where 
+  Stack Overflow fails to meet its promise that the best 
+  answers rise to the top. The accepted answerer actually 
+  says he wants my answer to be accepted.
+
+- How do I determine the size of an object in Python - http://stackoverflow.com/q/449560/541136
+
+- What is a monkey-patch? - http://stackoverflow.com/q/5626193/541136
+
+
+
+** How to contribute on Stack Overflow
+It's kinda hard. It's competitive. They've "gamified" answering questions. 
+They have a *lot* of new people all the time and limit damage a new account can cause, 
+you get privileges incrementally as you earn reputation points.
+
+You do start off being able to ask and answer questions, and being able to submit
+edits for review. If edits are approved, you get 2 reputation points (*rep*). If your question
+is upvoted, you get 5 rep. If your answer is upvoted, you get 10 rep.
+If your answer is accepted by the asker, you get 15 rep. Sometimes bounties are offered on questions.
+There's a rep cap of 200 per day, but accepts and bounties don't count toward the cap.
+
+Edits are an easy way to get over the early participation hurdles. So pull out Strunk and White,
+and get to fixing spelling and grammar errors, and removing cruft like sign-offs and apologies. 
+Do *not* change code (except to fix formatting), or change the meaning of answers,
+unless it's *your* answer.
+
+Next, answer questions. It's easier than asking. All the good questions have been asked.
+Not all of the good answers have been given. You can try to earn rep fast by 
+answering new questions that are liable to be closed as dupes and see maybe 100 views over 
+the next decade. Or you can try to write really good canonical answers to canonical
+questions, like me. Up to you.
+
+Some people have had a lot of success in asking good questions. Not me. 
+If you manage to create a formula for demonstrable success in asking questions, 
+let me know how.
+
+* Linux
+If you like to have as much control of your operating system as possible,
+I highly recommend installing a distribution of Linux.
+
+** My Linux Story
+
+I've always been very frustrated with Windows, and 
+I was aware of Linux since the early 90s,
+(with all the computer magazines in the computer software stores, who
+could miss the penguin and inquire about him).
+
+I was told, "Install Windows if you want to learn how Windows works.
+If you want to learn how computers work, install Linux."
+
+After much study, ensuring I had the software I needed (office and development
+software, basically everything but games) I decided to install Linux. 
+
+I set it up for dual boot, and when I found that I was only rarely using Windows
+at all, I put Linux on the other partition and resolved to only access Windows
+from a virtual machine.
+
+** To install Linux
+
+Installing Linux is fairly simple.
+
+1. Create a bootable thumbdrive or CD (google for ~unetbootin~).
+2. Boot the computer you want to install it on from that.
+3. Follow the instructions to install it.
+
+Note that this will likely wipe any other operating systems
+you may have installed.
+
+If you want to dual boot, it's usually a bit more complicated.
+
+To do this, you need to resize your current drive, thus making
+room for Linux. Then you'll need to back your stuff up (unless
+you are willing to risk losing it all.) Then you'll need to 
+do the Linux install, being careful not to write over your 
+prior OS installation.
+
+I much prefer to run Windows in a virtual machine (which is 
+really easy), so I don't bother with dual-booting any more.
+
+* How to get started with Python
+
+If this topic interests you, you're either new to Python,
+helping others new to Python, or second guessing your current setup.
+
+There are a couple of ways to do this. If you're just beginning with Python
+I'd recommend you download and use the Anaconda distribution.
+
+If you're doing this for work, do what your boss says. If you're
+the boss, and you're checking this out, your people should probably
+be using pip with virtual environments - unless they've worked out something
+far more sophisticated.
+
+** Anaconda 
+
+Anaconda installs a new Python in your user area, along with
+many other commonly used libraries.
+
+It's a one-shot install, even if you want to use pandas, requests, 
+and flask.
+
+It has a package manager called conda that can install
+other packages, even the stats language, R.
+ 
+It even comes with its own Integrated Development Environment (IDE). 
+
+I don't recommend IDE's, but a common issue with IDE's is 
+wiring them up to work with your language interactively. 
+
+SPyDEr, the IDE that comes with Anaconda, will have that working
+for you out of the box.
+
+** pip
+
+There is another method, pip, which has improved recently. 
+
+Most people would have trouble installing libraries with
+compiled C extensions with pip. Recent improvements make
+that less of an issue. 
+
+If you choose to go the pip route, you should be careful to
+only use it to install to your user area. I understand Ubuntu
+does this for pip by default, but other operating systems 
+might not be so thoughtful.
+
+You would be expected to use pip with virtual environments. 
+There are lots of great tutorials on how to do that.
+* How to learn Python
+
+As a best practice, I recommend using [[http://docs.python.org][the official docs]].
+If you're just learning, I think starting with Python 3 is just fine
+unless you expect to be working somewhere that is on Python 2 for the near future.
+
+It's easy to learn the difference, at which point you'll know both.
+
+If you *really* study the commonly used stuff, and at least become aware
+of the things you don't know, you'll be a capable Python programmer before you know it.
+
+Consider the below items only slightly ordered, and don't let being blocked on any
+one item prevent you from going on to the next.
+
+Alternatively, you could pre-order the book I intend to write. Nothing like impatient customers
+to drive me to write about Python.
+
+** Do the official tutorial
+Start at [[http://docs.python.org/tutorial/introduction][Chapter 3, The Introduction]]
+** Read the Library Reference
+Start with the [[http://docs.python.org/library/functions][builtins]]
+
+** Read the Language Reference
+This doc includes comprehensive overviews of expressions,  control flow, importing, etc. 
+but I like to point beginners directly at the [[http://docs.python.org/reference/grammar.html][grammar file]].
+** Read the PEPs and the Source code
+The [[http://www.python.org/dev/peps/][PEPs]] are Python Enhancement Proposals (like Requests For Change, but we don't like breaking
+changes in Python.)
+ 
+I highly recommend beginners to Python read [[http://www.python.org/dev/peps/pep-0008/][PEP 8]] early. Others can come later.
+
+The source code is viewable on [[https://github.com/python/cpython][github]]. Start by reading the Python in the Lib directory.
+Then move on to the C code in other directories (Python, Objects, Modules, Include) 
+* Emacs - Spacemacs & Orgmode
+Ok, here I'm going to describe my personal (not for work) development environment.
+
+It's highly experimental, and very configuration heavy.
+
+It's not super sophisticated - it's just for home use - but
+I invest in learning it now so that I'll always be able to leverage
+it in the future.
+
+#+BEGIN_aside
+(At work I have a custom built IDE that uses Python to tie together UI 
+elements built in C++ and integrates version control and reviews. 
+I'd like my emacs setup to reflect that kind of efficiency one day.)
+#+END_aside
+
+** Which Emacs version to use
+You can get a [[https://www.gnu.org/software/emacs/download.html][recent version of emacs here]].
+
+I have been using Emacs 24.5, but Emacs 25 also works.
+I want to try to keep my Emacs up-to-date.
+
+** Emacs on Android 
+
+I have drafted nearly 100% of this page on my Android tablet,
+a Google Nexus 7, 2013, using a Logitech bluetooth keyboard. 
+It's not perfect - Android seems to inelegantly kill processes
+that use too much memory - and with a lot of Spacemacs layers,
+I seem to hit that level too easily.
+
+** Spacemacs  
+Spacemacs allows you to quickly install a "layer" of packages with a 
+single entry in the ~.spacemacs~ file, a dotfile 
+(a dotfile is a hidden config file in your home directory, Linux/Unix will hide it.)
+
+It's super easy to install (assuming you have git and are in your home directory),
+if you already have a ~.emacs.d~ directory, you should move it first:
+
+#+BEGIN_SRC bash
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#+END_SRC
+
+This gets you the latest spacemacs version and drops it right where your ~.emacs.d~
+directory should be (move your old one first, if you have one).
+
+An example of a layer is ~python~. Adding that to your ~.spacemacs~ dotfile 
+causes emacs to ensure that you have over 20 packages installed that are
+relevant to programming in Python, and that shouldn't conflict with each other.
+
+Troubleshooting Spacemacs: Sometimes things go wrong. I'm not always sure why. 
+The issue has usually been something to do with compiled emacs lisp (elisp)
+files becoming incompatible with each other. The fix has been pretty easy so far.
+I've alternately uninstalled and reinstalled emacs, and deleted the elpa directory
+from my .emacs.d directory, and when I relaunched emacs, then (almost) everything
+reinstalled properly and works. 
+
+I'm putting up with the UX issues to learn it better and expand my horizons.
+
+
+** Orgmode
+Orgmode is a (now builtin) mode in Emacs that uses a hierarchical outline
+format to organize information in files. 
+
+It's a type of markdown, but it's quite sophisticated as well. 
+It can be used for writing material for publication or presentations, 
+via pdf or web format.
+
+In fact, I'm building this page with Orgmode.
+
+To use Orgmode, just open a file with .org as the suffix, and start writing.

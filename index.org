@@ -1,17 +1,24 @@
-#+title: Aaron Hall, MBA
+#+title: Aaron Hall
 #+author: Aaron Hall
-#+options: toc:t html5-fancy:t
+#+subtitle: Programmer and Professor
+#+description: 
+#+keywords: learning Python programming language Linux StackOverflow Stack Overflow GNU 
+#+options: toc:t html5-fancy:t num:nil
 #+html_doctype: html5
 #+html_container: article
+#+INFOJS_OPT: view:overview
+# views: info overview content showall
+# toc:nil
 
-* COMMENT TODO Write up [0/14] [0%]
-  - [ ] About Me
-  - [ ] Talks
-  - [ ] Stack Overflow Answers
-  - [ ] Contributing on Stack Overflow
-  - [ ] Linux
-  - [ ] Python
-  - [ ] Emacs
+
+* COMMENT TODO Write up [7/14] [50%]
+  - [X] About Me
+  - [X] Talks
+  - [X] Stack Overflow Answers
+  - [X] Contributing on Stack Overflow
+  - [X] Linux
+  - [X] Python
+  - [X] Emacs
   - [ ] HTML
   - [ ] Statistics
   - [ ] Economics
@@ -33,7 +40,7 @@ I'm interested in:
 It's intended to be a high-level overview. Please search Google or
 follow the links I give if you want to learn more.
 
-* COMMENT My story:
+* My story:
 - National Merit Scholar
 - Graduated with 169 credit hours, BS Political Science & Real Estate
 - Financial Advisor with Ameriprise and Merrill Lynch
@@ -46,18 +53,18 @@ follow the links I give if you want to learn more.
 
 * Talks
 I've given a number of talks on Python at Meetups and Conventions - I'll try to link to 
-their material here as much as I can.
+their material here as much as I can. 
 
 - Learning Python with Best Practices (given at NYC Python)
 - Python Best Practices (NYC Python)
 - Linear Models with Python (PyGotham 2014)
 - The Python Data Model, when and how to write Objects (PyGotham 2015 - available on [[https://www.youtube.com/watch?v=iGfggZqXmB0][Youtube]])
 - Functional Programming with Python (NYC Python)
-- Python by Aaron Hall (N Languages Meetup (video coming soon))
+- Python by Aaron Hall (N Languages Meetup (video pending review!)
 - Best Practices for Reusable Python (PyGotham 2016 (video coming soon))
 
 * Stack Overflow
-Don't learn Python by reading Answers on Stack Overflow. 
+Don't learn Python by reading answers on Stack Overflow. 
 
 Ok, you can learn some things, but you may find you need to later unlearn things. 
 
@@ -68,8 +75,9 @@ motivation is usually my dissatisfaction with the accepted answer
 and other top answers on the question. I try to write what I 
 consider to be outstanding answers to the questions.
 
-What makes an outstanding answer? To me, answers that are both technically precise 
-and directly communicate the important points are great answers.
+What makes an outstanding answer? To me, answers that are technically precise,
+demonstrably correct, and directly communicate the important points are 
+great answers.
 
 On Stack Overflow, they advertise that the best answers rise to the top.
 This condition does not always hold. New great answers are still 
@@ -92,24 +100,72 @@ but who's keeping score?) on Stack Overflow.
 #+END_HTML
 #+END_aside
 
-My top [[http://stackoverflow.com/users/541136/aaron-hall?tab=answers&sort=votes][100 or so answers]] are probably worth reading.
-
-I'll list ones I specifically want to call out here. 
+My top [[http://stackoverflow.com/users/541136/aaron-hall?tab=answers&sort=votes][100 or so answers]] are probably worth reading. 
+I've kinda organized my answers with over 8 upvotes here.
 
 Note that I'm linking to the questions,
-not the answers, so Ctrl-F and search for my name 
-if you want to see my answers.
+not specifically my answers, so use Ctrl-f and search for my name 
+to find my answers. 
 
-** Procedural Programming
+Also note that the stated ethos of the site is that the 
+best answers rise to the top. 
+
+That can actually take years.
+
+We can improve the speed of the sorting algorithm by voting up good answers
+and voting down poor ones. So while you're reading content on Stack Overflow, 
+remember to vote early and often.
+
+** Data types and their methods
+
+- [[http://stackoverflow.com/q/1024847/541136][Add a key to a Python dictionary]]
+- [[http://stackoverflow.com/q/38987/541136][How to merge two Python dictionaries in a single expression?]]
+- [[http://stackoverflow.com/q/252703/541136][Difference between the list methods append and extend]]
+- [[http://stackoverflow.com/q/2612802/541136][Clone or copy a list]]
+- [[http://stackoverflow.com/q/1712227/541136][How to get the size of a list]]
+- [[http://stackoverflow.com/q/22741068/541136][Remove identical items from a list and sort it]]
+- [[http://stackoverflow.com/q/8537916/541136][Prepend to a list]]
+- [[http://stackoverflow.com/q/509211/541136][Explain slice notation]] - essentially list, string, and tuple ~__getitem__~ method usage.
+- [[http://stackoverflow.com/q/646644/541136][Get the last items of a list]]
+- [[http://stackoverflow.com/q/2970608/541136][What are named tuples?]]
+- [[http://stackoverflow.com/q/931092/541136][Reverse a string]]
+- [[http://stackoverflow.com/q/6797984/541136][Convert a string to lowercase]]
+- [[http://stackoverflow.com/q/3437059/541136][Does Python have a string contains method?]]
+- [[http://stackoverflow.com/q/21718345/541136][Determine if a list of words exists in a string]]
+- [[http://stackoverflow.com/q/493819/541136][Why is it str.join(list) instead of list.join(str)?]]
+- [[http://stackoverflow.com/q/37903317/541136][Is there a constant for Unicode whitespace?]]
+- [[http://stackoverflow.com/q/21542694/541136][Difference between using commas, concatenation, and string formatters]] - printing 
+  options (note that there is a really good example of how not to answer on Stack Overflow
+  here. The advice given is perfectly correct, but it's barely a single complete sentence,
+  it's written in a very informal style, and as a result, it has 0 upvotes. The user
+  sits at 1 reputation point as well.)
+- [[http://stackoverflow.com/q/230751/541136][Flush the output of ~print~]]
+- [[http://stackoverflow.com/q/4760215/541136][Run a shell command from Python]]
+- [[http://stackoverflow.com/q/415511/541136][Getting the current time]]
+- [[http://stackoverflow.com/q/82831/541136][Check whether a file exists]]
+- [[http://stackoverflow.com/q/4510640/541136][Check if directory exists and create it if necessary]]
+- [[http://stackoverflow.com/q/1267869/541136][Force division to be floating point]]
+
+
+** Procedural Programming & Modules
 
 The answers I have on these questions cover important
 idiomatic statements and control flow in Python.
 
-- What does ~if __name__ == “__main__”:~ do? - http://stackoverflow.com/q/419163/541136
-- for loops, else
-- Accessing the index in Python for loops - http://stackoverflow.com/q/522563/541136
-- limit an iterable
-- try except else finally
+- [[http://stackoverflow.com/q/44834/541136 ][Modules' ~__all__~]]
+- [[http://stackoverflow.com/q/419163/541136][What does ~if __name__ == “__main__”:~ do?]]
+- [[http://stackoverflow.com/q/394809/541136][Ternary conditional operator]]
+- [[http://stackoverflow.com/q/522563/541136][Accessing the index in Python for loops]]
+- [[http://stackoverflow.com/q/36106712/541136][Limit iterations of an enumerated loop]]
+- [[http://stackoverflow.com/q/2052390/541136][Manually raising (throwing) an exception in Python]]
+- [[http://stackoverflow.com/q/21553327/541136][Why is “except: pass” a bad programming practice?]]
+- [[http://stackoverflow.com/q/730764/541136][How do you properly ignore exceptions]]
+- [[http://stackoverflow.com/q/6470428/541136][Catch multiple exceptions in one line]]
+- [[http://stackoverflow.com/q/3702675/541136][Print the full traceback without halting the program]]
+- [[http://stackoverflow.com/q/855759/541136][Intended use of the optional ~else~ clause of the ~try~ statement?]]
+- [[http://stackoverflow.com/q/16138232/541136][Good practice to use try-except-else(-finally)?]]
+
+
 
 ** Functional Programming 
 
@@ -124,37 +180,67 @@ are basically severely limited functions - they don't know their
 name or have a docstring, and you can only give them a simple statement
 to return.
 
-- list comps and generator expressions
-- arguments, *args, **kwargs
-- decorators
-- timing out a function
-- What does the ~yield~ keyword do? - http://stackoverflow.com/q/231767/541136
+Note also that list comps and generator expressions have subsumed
+map and filter in Python.
+
+- [[http://stackoverflow.com/q/22439752/541136][Local versus global variables]]
+- [[http://stackoverflow.com/q/423379/541136][Using global variables in a function other than the one that created them]]
+- [[http://stackoverflow.com/q/2776829/541136][Difference between Generators and Iterators]]
+- [[http://stackoverflow.com/q/3459098/541136][Create List of Single Item Repeated n Times]]
+- [[http://stackoverflow.com/q/209840/541136][Map two lists into a dictionary]]
+- [[http://stackoverflow.com/q/36901/541136][Arguments, ~*args~ and ~**kwargs~ for parameters]]
+- [[http://stackoverflow.com/q/492519/541136][Timeout on a function call]]
+- [[http://stackoverflow.com/q/31822190/541136][How does the @timeout(timelimit) decorator work?]]
+- [[http://stackoverflow.com/q/36917042/541136][Pairwise circular for loop]]
+- [[http://stackoverflow.com/q/231767/541136][What does the ~yield~ keyword do?]]
+- [[http://stackoverflow.com/q/494594/541136][How to write the Fibonacci sequence]]
 
 ** Object Oriented Programming (OOP)
 
-
-- ~super~ - http://stackoverflow.com/q/222877/541136
-- Understanding Python ~super()~ with ~__init__()~ methods http://stackoverflow.com/q/576169/541136
-
-- When and how to use ~__slots__~ - http://stackoverflow.com/q/472000/541136
-  Note that this is a huge example, in my mind, of where 
+- [[http://stackoverflow.com/q/306313/541136][“is” operator behaves unexpectedly with integers]] - everything 
+  is an object (including integers)
+- [[http://stackoverflow.com/q/1606436/541136][Adding docstrings to namedtuples]]
+- [[http://stackoverflow.com/q/735975/541136][Static methods]]
+- [[http://stackoverflow.com/q/136097/541136][What is the difference between @staticmethod and @classmethod]]
+- [[http://stackoverflow.com/q/24253761/541136][Call an instance of an object]] 
+- [[Http://stackoverflow.com/q/635483/541136][Best way to implement nested dictionaries]] - demonstrates allowing
+  inheritance (subclassers) to elegantly change behavior.
+- [[http://stackoverflow.com/q/860245/541136][Difference between a mixin and inheritance]]
+- [[http://stackoverflow.com/q/21361106/541136][Implement a dict with Abstract Base Classes]]
+- [[http://stackoverflow.com/q/222877/541136][How to use ~super~]] - dependency injection, 
+- [[http://stackoverflow.com/q/576169/541136][Understanding Python ~super()~ with ~__init__()~ methods]]
+- [[http://stackoverflow.com/q/472000/541136][When and how to use ~__slots__~]]
+  (Note that this is a huge example, in my mind, of where 
   Stack Overflow fails to meet its promise that the best 
   answers rise to the top. The accepted answerer actually 
-  says he wants my answer to be accepted.
+  says he wants my answer to be accepted.)
+- [[http://stackoverflow.com/q/449560/541136][How do I determine the size of an object in Python]]
+- [[http://stackoverflow.com/q/5626193/541136][What is a monkey-patch?]] 
+- [[http://stackoverflow.com/q/37601644/541136][What's the Enum type good for?]]
+- [[http://stackoverflow.com/q/1436703/541136][Difference between ~__str__~ and ~__repr__~]]
+- [[http://stackoverflow.com/q/4352244/541136][Implement ~__ne__~ in terms of ~__eq__~?]]
+- [[http://stackoverflow.com/q/372042/541136][Difference between Abstract Class and Interface]] - (there is none!)
+- [[http://stackoverflow.com/q/3798835/541136][Understanding ~__get__~ and ~__set__~ and Python descriptors]]
 
-- How do I determine the size of an object in Python - http://stackoverflow.com/q/449560/541136
+** Putting it all together
 
-- What is a monkey-patch? - http://stackoverflow.com/q/5626193/541136
+These answers combine multiple elements from the above categories.
 
+- [[http://stackoverflow.com/q/972/541136][Adding a method to an existing object instance]] (Do not usually do this, but how is instructive.)
+- [[http://stackoverflow.com/q/449560/541136][Determine the size of an object]] 
+- [[http://stackoverflow.com/q/1319615/541136][Proper way to declare custom exceptions]]
+- [[http://stackoverflow.com/q/129507/541136][Test that a function throws an exception]]
+- [[http://stackoverflow.com/q/32770762/541136][Optimization break-even point]]
+- [[http://stackoverflow.com/q/23663231/541136][Does enumerate produce a generator object?]]
 
-
-** How to contribute on Stack Overflow
+* How to contribute on Stack Overflow
 It's kinda hard. It's competitive. They've "gamified" answering questions. 
-They have a *lot* of new people all the time and limit damage a new account can cause, 
-you get privileges incrementally as you earn reputation points.
+They have a *lot* of new people all the time and to limit damage a new account can cause, 
+you get privileges (like commenting on others posts) incrementally as you earn 
+reputation points.
 
 You do start off being able to ask and answer questions, and being able to submit
-edits for review. If edits are approved, you get 2 reputation points (*rep*). If your question
+edits for review. If edits are approved, you get 2 reputation points (rep). If your question
 is upvoted, you get 5 rep. If your answer is upvoted, you get 10 rep.
 If your answer is accepted by the asker, you get 15 rep. Sometimes bounties are offered on questions.
 There's a rep cap of 200 per day, but accepts and bounties don't count toward the cap.
@@ -162,7 +248,7 @@ There's a rep cap of 200 per day, but accepts and bounties don't count toward th
 Edits are an easy way to get over the early participation hurdles. So pull out Strunk and White,
 and get to fixing spelling and grammar errors, and removing cruft like sign-offs and apologies. 
 Do *not* change code (except to fix formatting), or change the meaning of answers,
-unless it's *your* answer.
+(unless it's your answer).
 
 Next, answer questions. It's easier than asking. All the good questions have been asked.
 Not all of the good answers have been given. You can try to earn rep fast by 
@@ -170,29 +256,56 @@ answering new questions that are liable to be closed as dupes and see maybe 100 
 the next decade. Or you can try to write really good canonical answers to canonical
 questions, like me. Up to you.
 
+To get upvotes, consider Socrates on persuasion - you need ethos, pathos, and logos.
+
+- Logos: This is logic and evidence. Better communication of logic and evidence will
+  greatly help you succeed on the site, especially when you're starting with nothing.
+  With code, it's usually easy to demonstrate you have something that works, but
+  you still need to back up your recommendations with strong and readily acceptable 
+  reasoning. 
+- Pathos: This is how you say what you say. For a speaker, it's the emotion conveyed
+  by the words. A disconnect can hurt you. If you have a strong tone (and you're right), 
+  you'll usually get more upvotes. I have a personal bias against tone. This
+  probably hurts me, when I say "don't do this" and don't say "*I mean really never 
+  ever do this*."
+- Ethos: This the credibility of the speaker/author. 
+  The major source of credibility on Stack Overflow is your reputation point count.
+  For better or worse, you can get away with less of the other two if you have this.
+  I'm sure I have some material that now benefits from my higher reputation count,
+  but in the beginning, everything I posted was greeted with scepticism and required
+  my appeals to Logos to carry me.
+
+[[http://stackoverflow.com/q/21542694/541136][The last answer here]] is a really good example of how not to answer on Stack Overflow. 
+The advice given is perfectly correct, but it's barely a single complete sentence,
+it's written in a very informal style, and as a result, it has 0 upvotes. The user
+sits at 1 reputation point as well.
+
 Some people have had a lot of success in asking good questions. Not me. 
 If you manage to create a formula for demonstrable success in asking questions, 
 let me know how.
 
 * Linux
 If you like to have as much control of your operating system as possible,
-I highly recommend installing a distribution of Linux.
+I highly recommend installing a distribution of Linux, like Ubuntu,
+Debian, or Fedora.
 
 ** My Linux Story
 
-I've always been very frustrated with Windows, and 
-I was aware of Linux since the early 90s,
+Although I always used their software, I've always been very frustrated 
+with Microsoft's opacity and lack of documentation.
+ 
+I have been aware of Linux since the early 90s,
 (with all the computer magazines in the computer software stores, who
 could miss the penguin and inquire about him).
 
-I was told, "Install Windows if you want to learn how Windows works.
-If you want to learn how computers work, install Linux."
+I was told, "Use Windows if you want to learn how Windows works.
+If you want to learn how computers work, use Linux."
 
 After much study, ensuring I had the software I needed (office and development
 software, basically everything but games) I decided to install Linux. 
 
-I set it up for dual boot, and when I found that I was only rarely using Windows
-at all, I put Linux on the other partition and resolved to only access Windows
+I started by dual booting Linux and Windows, and when I found that I was 
+only rarely using Windows at all, I began to only access Windows
 from a virtual machine.
 
 ** To install Linux
@@ -203,19 +316,15 @@ Installing Linux is fairly simple.
 2. Boot the computer you want to install it on from that.
 3. Follow the instructions to install it.
 
-Note that this will likely wipe any other operating systems
-you may have installed.
+Note that if you're not careful, or even if you are and 
+something goes wrong, you could wipe any other operating systems
+you may have installed (like Windows). So backup your data.
 
-If you want to dual boot, it's usually a bit more complicated.
-
-To do this, you need to resize your current drive, thus making
-room for Linux. Then you'll need to back your stuff up (unless
-you are willing to risk losing it all.) Then you'll need to 
-do the Linux install, being careful not to write over your 
-prior OS installation.
+If you want to dual boot, it's a little more complicated,
+but Ubuntu's current installer seems to handle it well..
 
 I much prefer to run Windows in a virtual machine (which is 
-really easy), so I don't bother with dual-booting any more.
+really easy).
 
 * How to get started with Python
 
@@ -230,40 +339,40 @@ the boss, and you're checking this out, your people should probably
 be using pip with virtual environments - unless they've worked out something
 far more sophisticated.
 
-** Anaconda 
+** python.org and pip
 
-Anaconda installs a new Python in your user area, along with
-many other commonly used libraries.
+You can also get Python from the [[https://www.python.org][official site]].
+If you go that route, you'll want to use pip to install packages. 
 
-It's a one-shot install, even if you want to use pandas, requests, 
-and flask.
+People used to have trouble installing libraries with
+compiled C extensions with pip, but I understand that this
+is now improved.
 
-It has a package manager called conda that can install
-other packages, even the stats language, R.
- 
-It even comes with its own Integrated Development Environment (IDE). 
-
-I don't recommend IDE's, but a common issue with IDE's is 
-wiring them up to work with your language interactively. 
-
-SPyDEr, the IDE that comes with Anaconda, will have that working
-for you out of the box.
-
-** pip
-
-There is another method, pip, which has improved recently. 
-
-Most people would have trouble installing libraries with
-compiled C extensions with pip. Recent improvements make
-that less of an issue. 
-
-If you choose to go the pip route, you should be careful to
+You should be careful to
 only use it to install to your user area. I understand Ubuntu
 does this for pip by default, but other operating systems 
 might not be so thoughtful.
 
-You would be expected to use pip with virtual environments. 
+You should probably use pip with virtual environments. 
 There are lots of great tutorials on how to do that.
+
+** Anaconda 
+
+[[https://www.continuum.io/downloads][Anaconda]] installs a new Python in your user area, along with
+many other commonly used libraries. I like it for teaching and
+for beginners because it's a one-shot install of most things 
+you want, and a one-shot remove if you don't like it.
+
+It comes with 
+
+- lots of packages not already in the standard library, for example: 
+  numpy, pandas, requests, and flask.
+- a package manager that can install other things: conda - it can even 
+  install R too. 
+- an IDE: SPyDEr (should work out of the box without configuration, too.)
+- Jupyter Notebook - a local app that lets you run Python (and
+  other interactive languages) in your browser.
+
 * How to learn Python
 
 As a best practice, I recommend using [[http://docs.python.org][the official docs]].
@@ -298,9 +407,10 @@ I highly recommend beginners to Python read [[http://www.python.org/dev/peps/pep
 The source code is viewable on [[https://github.com/python/cpython][github]]. Start by reading the Python in the Lib directory.
 Then move on to the C code in other directories (Python, Objects, Modules, Include) 
 * Emacs - Spacemacs & Orgmode
-Ok, here I'm going to describe my personal (not for work) development environment.
+Here I describe my personal (not usually for work) 
+development environment.
 
-It's highly experimental, and very configuration heavy.
+For me, it's highly experimental, and very configuration heavy.
 
 It's not super sophisticated - it's just for home use - but
 I invest in learning it now so that I'll always be able to leverage
@@ -315,16 +425,19 @@ I'd like my emacs setup to reflect that kind of efficiency one day.)
 ** Which Emacs version to use
 You can get a [[https://www.gnu.org/software/emacs/download.html][recent version of emacs here]].
 
-I have been using Emacs 24.5, but Emacs 25 also works.
+I have been using Emacs 24.5, but Emacs 25 also works. 
+I've been building 25, and it's what I've used to put
+the finishing touches on this page with.
 I want to try to keep my Emacs up-to-date.
 
 ** Emacs on Android 
 
-I have drafted nearly 100% of this page on my Android tablet,
-a Google Nexus 7, 2013, using a Logitech bluetooth keyboard. 
+I have drafted nearly 75% of this page on my Android tablet,
+using a bluetooth keyboard. The app that I used to get it is called
+Termux.
+
 It's not perfect - Android seems to inelegantly kill processes
-that use too much memory - and with a lot of Spacemacs layers,
-I seem to hit that level too easily.
+when it uses too much memory.
 
 ** Spacemacs  
 Spacemacs allows you to quickly install a "layer" of packages with a 
@@ -352,8 +465,8 @@ I've alternately uninstalled and reinstalled emacs, and deleted the elpa directo
 from my .emacs.d directory, and when I relaunched emacs, then (almost) everything
 reinstalled properly and works. 
 
-I'm putting up with the UX issues to learn it better and expand my horizons.
-
+I was putting up with the UX issues to learn it better and expand my horizons.
+I've gone back to regular emacs to learn more about emacs.
 
 ** Orgmode
 Orgmode is a (now builtin) mode in Emacs that uses a hierarchical outline

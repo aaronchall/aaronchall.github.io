@@ -7,11 +7,39 @@
 #+html_doctype: html5
 #+html_container: article
 #+INFOJS_OPT: view:overview
+# +INFOJS_OPT: view:info
+# +INFOJS_OPT: view:content
+# +INFOJS_OPT: view:showall
 # views: info overview content showall
 # toc:nil
 
+#+begin_html
+<style>
+body {
+  background-color: black;
+  color: lightgrey;
+  width: 50em;
+  margin:0px auto auto auto;
+}
+a {
+  color: lightblue;
+}
+h2, h3 {
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.outline-text-2, .outline-text-3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40em;
+  padding-left: 16px;
+}
+</style> 
+#+end_html
 
-* COMMENT TODO Write up [7/14] [50%]
+
+* COMMENT TODO Write up [7/16] [43%]
   - [X] About Me
   - [X] Talks
   - [X] Stack Overflow Answers
@@ -19,7 +47,9 @@
   - [X] Linux
   - [X] Python
   - [X] Emacs
-  - [ ] HTML
+  - [ ] Haskell
+  - [ ] Web Development
+  - [ ] LaTeX - exporting, templates, and workflows
   - [ ] Statistics
   - [ ] Economics
   - [ ] Business
@@ -34,13 +64,13 @@ in the same types of things that I'm interested in.
 
 I'm interested in:
 - Programming with Python and Linux
-- Emacs, Spacemacs, Orgmode
-- Computer Science & Economics
+- Emacs and Orgmode
+- Computer Science, Economics, and Business
 
 It's intended to be a high-level overview. Please search Google or
 follow the links I give if you want to learn more.
 
-* My story:
+* My story
 - National Merit Scholar
 - Graduated with 169 credit hours, BS Political Science & Real Estate
 - Financial Advisor with Ameriprise and Merrill Lynch
@@ -62,6 +92,7 @@ their material here as much as I can.
 - Functional Programming with Python (NYC Python)
 - Python by Aaron Hall (N Languages Meetup (video pending review!)
 - Best Practices for Reusable Python (PyGotham 2016 (video coming soon))
+- OOP Panel TODO complete
 
 * Stack Overflow
 Don't learn Python by reading answers on Stack Overflow. 
@@ -79,6 +110,8 @@ What makes an outstanding answer? To me, answers that are technically precise,
 demonstrably correct, and directly communicate the important points are 
 great answers.
 
+** The Best Answers
+
 On Stack Overflow, they advertise that the best answers rise to the top.
 This condition does not always hold. New great answers are still 
 ranked (by default) way below answers that have been there for years,
@@ -86,13 +119,15 @@ and yet have only gathered a few votes. This issue could be
 addressed by allowing users to sort by recent votes, but this feature
 may never appear.
 
+** My Best Answers
+
 #+BEGIN_aside
 I'm in the top .5% of all time (actually top .36% as of this writing,
 but who's keeping score?) on Stack Overflow.
 
 #+BEGIN_HTML
 <a href="http://stackoverflow.com/users/541136/aaron-hall?tab=profile">
-  <img src="http://stackoverflow.com/users/flair/541136.png?theme=clean"
+  <img src="http://stackoverflow.com/users/flair/541136.png?theme=dark"
   width=208 height=58 alt="profile for Aaron Hall at Stack Overflow, for professional and enthusiast programmers"
   >
   </img>
@@ -110,13 +145,25 @@ to find my answers.
 Also note that the stated ethos of the site is that the 
 best answers rise to the top. 
 
-That can actually take years.
+It can actually take years for new best answers to rise to the top.
 
 We can improve the speed of the sorting algorithm by voting up good answers
 and voting down poor ones. So while you're reading content on Stack Overflow, 
-remember to vote early and often.
+remember to *vote early and often*.
 
 ** Data types and their methods
+
+These are some of my answers on how to use Python's builtin data-types.
+
+Dictionaries are mappings of keys to values (implemented 
+as hash tables). So the keys must be hashable.
+
+Lists and tuples are essentially arrays of pointers to objects. 
+Lists are mutable, they can be changed - but tuples are not.
+
+Since lists are mutable, you can't use them in keys for dicts. 
+But you can use tuples. 
+
 
 - [[http://stackoverflow.com/q/1024847/541136][Add a key to a Python dictionary]]
 - [[http://stackoverflow.com/q/38987/541136][How to merge two Python dictionaries in a single expression?]]
@@ -197,8 +244,17 @@ map and filter in Python.
 
 ** Object Oriented Programming (OOP)
 
-- [[http://stackoverflow.com/q/306313/541136][“is” operator behaves unexpectedly with integers]] - everything 
-  is an object (including integers)
+These Q&As relate to the fact that in Python,
+everything is an object. That includes integers.
+
+Most all objects have methods that you as a user 
+are intended to use. They all have special methods
+that start with double beginning and ending underscores.
+These are sometimes called "dunder" methods because
+of that.
+
+
+- [[http://stackoverflow.com/q/306313/541136][“is” operator behaves unexpectedly with integers]]
 - [[http://stackoverflow.com/q/1606436/541136][Adding docstrings to namedtuples]]
 - [[http://stackoverflow.com/q/735975/541136][Static methods]]
 - [[http://stackoverflow.com/q/136097/541136][What is the difference between @staticmethod and @classmethod]]
@@ -224,7 +280,10 @@ map and filter in Python.
 
 ** Putting it all together
 
-These answers combine multiple elements from the above categories.
+These Q&As combine multiple elements from the above categories.
+They don't fit very neatly in the prior sections.
+
+These are also a bit advanced.
 
 - [[http://stackoverflow.com/q/972/541136][Adding a method to an existing object instance]] (Do not usually do this, but how is instructive.)
 - [[http://stackoverflow.com/q/449560/541136][Determine the size of an object]] 
@@ -234,27 +293,35 @@ These answers combine multiple elements from the above categories.
 - [[http://stackoverflow.com/q/23663231/541136][Does enumerate produce a generator object?]]
 
 * How to contribute on Stack Overflow
-It's kinda hard. It's competitive. They've "gamified" answering questions. 
+It can be hard. It's competitive. They've "gamified" answering questions. 
 They have a *lot* of new people all the time and to limit damage a new account can cause, 
 you get privileges (like commenting on others posts) incrementally as you earn 
-reputation points.
+reputation points (rep).
 
 You do start off being able to ask and answer questions, and being able to submit
-edits for review. If edits are approved, you get 2 reputation points (rep). If your question
+edits for review. If edits are approved, you get 2 rep. If your question
 is upvoted, you get 5 rep. If your answer is upvoted, you get 10 rep.
 If your answer is accepted by the asker, you get 15 rep. Sometimes bounties are offered on questions.
 There's a rep cap of 200 per day, but accepts and bounties don't count toward the cap.
 
+** Improving others' posts
+
 Edits are an easy way to get over the early participation hurdles. So pull out Strunk and White,
 and get to fixing spelling and grammar errors, and removing cruft like sign-offs and apologies. 
-Do *not* change code (except to fix formatting), or change the meaning of answers,
-(unless it's your answer).
+Do /not/ change code (except to fix formatting), or change the meaning of answers,
+(unless it's /your/ answer).
 
-Next, answer questions. It's easier than asking. All the good questions have been asked.
-Not all of the good answers have been given. You can try to earn rep fast by 
+** Answering Questions
+
+Next, answer questions. It's easier than asking. 
+Almost all the good questions have been asked.
+
+Not all of the good answers have been given. 
+
+You can try to earn rep fast by 
 answering new questions that are liable to be closed as dupes and see maybe 100 views over 
 the next decade. Or you can try to write really good canonical answers to canonical
-questions, like me. Up to you.
+questions, like me.
 
 To get upvotes, consider Socrates on persuasion - you need ethos, pathos, and logos.
 
@@ -266,23 +333,103 @@ To get upvotes, consider Socrates on persuasion - you need ethos, pathos, and lo
 - Pathos: This is how you say what you say. For a speaker, it's the emotion conveyed
   by the words. A disconnect can hurt you. If you have a strong tone (and you're right), 
   you'll usually get more upvotes. I have a personal bias against tone. This
-  probably hurts me, when I say "don't do this" and don't say "*I mean really never 
-  ever do this*."
+  probably hurts me, when I say "don't do this" instead of saying "/I mean really never 
+  ever do this/."
 - Ethos: This the credibility of the speaker/author. 
   The major source of credibility on Stack Overflow is your reputation point count.
-  For better or worse, you can get away with less of the other two if you have this.
+  (Unless perhaps you have widespread recognition as an expert on the topic at hand.)
+  For better or worse, you can get away with less of logos and pathos if you have ethos.
   I'm sure I have some material that now benefits from my higher reputation count,
   but in the beginning, everything I posted was greeted with scepticism and required
-  my appeals to Logos to carry me.
+  my appeals to logos to carry it.
 
 [[http://stackoverflow.com/q/21542694/541136][The last answer here]] is a really good example of how not to answer on Stack Overflow. 
 The advice given is perfectly correct, but it's barely a single complete sentence,
 it's written in a very informal style, and as a result, it has 0 upvotes. The user
-sits at 1 reputation point as well.
+sits at 1 reputation point as well. No ethos, pathos, or logos.
+
+** Asking Questions
 
 Some people have had a lot of success in asking good questions. Not me. 
 If you manage to create a formula for demonstrable success in asking questions, 
-let me know how.
+let me know how. 
+
+Top answerers have written long explanations about how to 
+ask good questions. But they don't ask questions. I don't find 
+their advice to be particularly helpful.
+
+The community is frequently capricious, unhelpful, and 
+rude - especially to newcomers, but also even to 
+me when I've asked questions.
+
+However, here's some guidelines to help improve your odds.
+
+- Don't give them an excuse to close your question.
+  Read the help and the rules for the site carefully. If any portion
+  of your question is off-topic (like asking for resources), 
+  they will likely vote to close/delete your question.
+  Don't mention wanting a resource. Just don't do it.
+- Don't apologize, explain why you don't know something,
+  go on about how new you are, thank them in advance 
+  (it's implied anyways), or
+  sign-off your question (your name is on your post).
+  That stuff is considered noise. All that matters is the question itself.
+- Don't write a wall of text. 
+  Write so that you are understandable 
+  at a 3rd grade level (or below if you can). 
+  Separate each sentence, one per paragraph. 
+  Bold the actual question. Phrase it as a question.
+  Use a question mark. Use a grammar and a spell check on your English.
+  The less you make the answerers think and think critical things 
+  about your question, the better.
+- Be super nice. Show some research effort. 
+  Use code to demonstrate what you're talking about. 
+  Make your example as small as possible. Show what you have
+  to work with, and what you expect the output to be.
+  Don't ask them to code for you.
+
+I don't know what else to tell you. If you make a good-faith
+effort to follow the guidelines I've given in submitting a 
+question, you may still have incompetent people try to shut
+your question down. Just stay positive, keep looking for the
+answer yourself, and if you can find it, feel free to answer 
+your own question. 
+
+** Moderation activities
+
+Stack Overflow also tracks your moderating activities, and 
+awards you with badges at certain points. The moderation
+tools become more available to you as you earn reputation.
+(See privileges.)
+
+When you earn access to these tools, remember how you were 
+treated, and try to raise the bar in your treatment of others.
+
+The easiest way to improve others' experiences on the site
+is to fix obvious and fixable problems with their questions.
+(See the prior section on asking questions.) Again,
+that gives you +2 rep for accepted edits. If you're conscientious,
+you will likely have some edits rejected that should have been
+accepted - just remain conscientious and continue improving 
+content, and you will be rewarded over the long run.
+
+You can also participate (as you earn the privilege)
+in reviewing posts. Be conscientious if you do.
+
+If the community, a moderator,
+or the system tells you you're wrong, then you're (99.9%
+of the time) wrong by definition. Happily accept your 
+wrongness, try to learn from it, 
+and continue helping as you can. If you get 
+temporarily banned from the review queue from time to time, 
+take a break and come back when your ban is up.
+
+Remember, it's all just internet points, which probably won't
+be worth anything ever. Maybe something when the singularity
+hits and AI takes over, but I don't see that happening any time
+soon, so you have plenty of time until then. (I would think
+that StackOverflow's internet points would be the most valuable,
+at that point.)
 
 * Linux
 If you like to have as much control of your operating system as possible,
@@ -339,6 +486,33 @@ the boss, and you're checking this out, your people should probably
 be using pip with virtual environments - unless they've worked out something
 far more sophisticated.
 
+** Some Python best practices
+
+Read [[https://www.python.org/dev/peps/pep-0008/][PEP 8]] and the [[https://google.github.io/styleguide/pyguide.html][Google Python Style Guide]]. 
+
+Here's some thoughts of how to write good Python.
+
+When writing a script, give it a docstring, and put the mainstuff
+in a ~main()~ function. Do the future imports for Python 2 and 3 
+compatibility, (~unicode_literals~ if it's [[http://python-future.org/unicode_literals.html][new code]]).
+
+e.g. in script.py:
+#+BEGIN_SRC python -n
+"""Explain purpose for script.py here"""
+from __future__ import print_function, division, absolute_import, unicode_literals
+
+from something import main_stuff # don't import * 
+# if following a tutorial, import the module and do dotted lookups.
+
+def main():
+    main_stuff()
+
+if __name__ == '__main__':
+    main()
+#+END_SRC
+
+The main could then be imported into other 
+
 ** python.org and pip
 
 You can also get Python from the [[https://www.python.org][official site]].
@@ -391,13 +565,37 @@ Alternatively, you could pre-order the book I intend to write. Nothing like impa
 to drive me to write about Python.
 
 ** Do the official tutorial
-Start at [[http://docs.python.org/tutorial/introduction][Chapter 3, The Introduction]]
+
+Start at [[http://docs.python.org/tutorial/introduction][Chapter 3, The Introduction]]. The first chapter is trivial, 
+and the second chapter is probably gobbledygook to anyone new to 
+programming.
+
+Keep going through the chapters and you'll get exposed to some of the 
+builtin standard library.
+
 ** Read the Library Reference
-Start with the [[http://docs.python.org/library/functions][builtins]]
+Start with the [[http://docs.python.org/library/functions][builtins]] (chapter 2 of the Library Reference). Chapter one is trivial.
+
+Learn the builtin functions. If you're ambitious, memorize their
+signatures (that is, the arguments that they take.) 
+
+Many of the builtin "functions" are actually types that can be 
+used to type check and can be subclassed, in addition to 
+instantiation.
+
+~__import__~ is mostly kept around for backwards compatibility.
+Don't bother using it.
+
+
 
 ** Read the Language Reference
-This doc includes comprehensive overviews of expressions,  control flow, importing, etc. 
-but I like to point beginners directly at the [[http://docs.python.org/reference/grammar.html][grammar file]].
+This doc includes comprehensive overviews of expressions, and statements 
+for control flow, importing, etc. 
+
+I like to point beginners directly at the [[http://docs.python.org/reference/grammar.html][grammar file]].
+
+
+
 ** Read the PEPs and the Source code
 The [[http://www.python.org/dev/peps/][PEPs]] are Python Enhancement Proposals (like Requests For Change, but we don't like breaking
 changes in Python.)
@@ -478,4 +676,47 @@ via pdf or web format.
 
 In fact, I'm building this page with Orgmode.
 
-To use Orgmode, just open a file with .org as the suffix, and start writing.
+To use Orgmode, just open a file in Emacs with .org as the suffix, and start writing.
+* Web Development
+
+Maybe blind leading the blind here, but 
+there's a few directions I would point you at. 
+
+You can do web development with Python in several ways,
+there a couple of static site generators written in Python.
+To use these, you'd write in a form of markdown 
+(markdown looks like mostly plain text), then
+the generator would turn that into HTML with perhaps CSS
+and JS. That's similar to what I've done to create this
+page, only I'm using emacs instead of Python. 
+
+There are also more dynamic things you can do, like using
+Flask and Django to provide APIs and interactive web-based
+GUIs (Graphical User Interfaces).
+
+However, to intelligently use these tools, you need to 
+at least start learning about HTML, CSS, and Javascript.
+
+[[https://developer.mozilla.org/en-US/docs/Learn][Mozilla Developer Network has a great learning portal]]
+with tutorials on all of these.
+
+[[http://www.w3schools.com/html/default.asp][W3 Schools]] is typically in the top of the first Google results
+on these topics, and they have fairly good tutorials as well.
+
+** HTML Specific
+
+It's always good to learn good style early on.
+
+I would definitely pay an early visit to the [[https://google.github.io/styleguide/htmlcssguide.xml][Google HTML/CSS style guide]].
+
+If you're a pedant, like me, you'll want to at least 
+scan and know how to read [[https://developers.whatwg.org/][the developer HTML specification]].
+
+
+** CSS
+
+There are pretty good CSS references. W3 style
+
+** Javascript
+
+The [[https://google.github.io/styleguide/javascriptguide.xml][Google Javascript Style Guide]] is another resource.
